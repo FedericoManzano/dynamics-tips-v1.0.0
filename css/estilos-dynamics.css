@@ -1,0 +1,19 @@
+
+.tips {
+    position: absolute;
+    padding: 10px;
+    font-size: 1em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background-color: rgba(0, 0, 0, 0.863);
+    color: white;
+    border-radius: 5px;
+}
+
+.tips .mueca-der {
+    position: absolute;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid rgba(0, 0, 0, 0.863);
+    top: calc(50% - 7px);
+    left: 100%
+}
