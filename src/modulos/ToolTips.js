@@ -1,11 +1,19 @@
 import $ from "jquery";
-
+import  "../../css/estilos-dynamics.css";
 (function () {
 
     let origen = null 
     let ele = null 
     let comp = null
     let activo = false
+
+
+    const dameCoordenadasIniciales = (origen, comentario) => {
+        let reacX = $(comentario).outerWidth() -  $(origen).outerWidth()
+        let reactY = $(comentario).outerHeight() -  $(origen).outerHeight()
+        return {x: posX(origen) + (reacX*-1) / 2, y: posY(origen) + (reactY*-1) / 2}
+    } 
+
 
     const posX = (origen) => {
         return $(origen).offset().left
@@ -52,6 +60,18 @@ import $ from "jquery";
         return offsetDer < 0 ? offsetDer *-1 +10: 0  
     }
 
+    const despArriba  = (origen, comentario) => {
+        let despCom = $(comentario).offset().top - $(window).scrollTop()
+        if(despCom < 0) 
+            $(comentario).css("top", dameCoordenadasIniciales(origen, comentario).y + despCom*-1 + 10)
+    } 
+
+    const despAbajo  = (origen, comentario) => {
+        let espacio = $(window).height() - $(comentario).offset().top - $(window).scrollTop()
+        if(espacio < 0) 
+            $(comentario).css("top", dameCoordenadasIniciales(origen, comentario).y - $(comentario).outerHeight() / 2 )
+    }
+
     const posicionarArriba = (origen, ele) => {
         $(ele).css("top", posY(origen) - $(ele).outerHeight())
         $(ele).css("transform", "translateY(-15px)")
@@ -78,11 +98,16 @@ import $ from "jquery";
         let corr = espacioTotal - $(ele).outerWidth()
         $(ele).css("left", corr)
         $(ele).css("transform", "translate(-15px)")
+        despArriba(origen,ele)
+        despAbajo(origen, ele)
+
     }
 
     const posicionarDerecha = (origen, ele) => {
         $(ele).css("left", $(origen).offset().left + $(origen).outerWidth())
         $(ele).css("transform", "translate(15px)")
+        despArriba(origen,ele)
+        despAbajo(origen, ele)
     }
 
     const realizarAparicion = (origen, ele) => {
