@@ -7,6 +7,8 @@
     background-color: rgba(0, 0, 0, 0.863);
     color: white;
     border-radius: 5px;
+    transform: translate(0);
+    transition: transform 0.3s;
 }
 
 .tips .mueca-der {
@@ -16,4 +18,48 @@
     border-left: 7px solid rgba(0, 0, 0, 0.863);
     top: calc(50% - 7px);
     left: 100%
+}
+
+.tips .mueca-izq {
+    position: absolute;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid rgba(0, 0, 0, 0.863);
+    top: calc(50% - 7px);
+    left: -5px
+}
+
+
+.tips .mueca-arr {
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid rgba(0, 0, 0, 0.863);
+    border-right: 10px solid transparent;
+    top: -5px;
+    left: calc(50% - 5px)
+}
+
+
+.tips .mueca-aba {
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-top: 10px solid rgba(0, 0, 0, 0.863);
+    border-right: 10px solid transparent;
+    bottom: -5px;
+    left: calc(50% - 5px)
+}
+
+.tips-ele {
+    overflow: visible !important;
+    z-index: 10000;
+}
+
+.tips-complemento {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9000;
+    display: none;
 }
