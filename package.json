@@ -17,6 +17,12 @@
     "dinamicos",
     "comentarios"
   ],
+
+  "files": [
+    "dist/js/*.js",
+    "src/{modulos}/**/*.{js}",
+    "src/**/*.js"
+  ],
   "author": "Federico Manzano",
   "license": "MIT",
   "bugs": {
