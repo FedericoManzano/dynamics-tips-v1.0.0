@@ -1,6 +1,6 @@
 {
   "name": "dynamics-tips",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Objetos dinamicos que se añaden debido a estimulos del usuario.",
   "main": "app.js",
   "scripts": {
@@ -21,7 +21,8 @@
   "files": [
     "dist/js/*.js",
     "src/{modulos}/**/*.{js}",
-    "src/**/*.js"
+    "src/**/*.js",
+    "css/**/*.css"
   ],
   "author": "Federico Manzano",
   "license": "MIT",
