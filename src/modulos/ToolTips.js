@@ -167,6 +167,25 @@ import Posicionamiento from "./Posicionamiento"
                     Posicionamiento.posicionarAbajo(origen, ele)
                 }
             break
+            default:
+                if(Posicionamiento.puedeAbajo(origen, ele)) {
+                    mueca = $("<span class='mueca-arr'></span>")
+                    $(ele).append(mueca)
+                    Posicionamiento.posicionarAbajo(origen, ele)
+                } else if(Posicionamiento.puedeArriba(origen, ele)) {
+                    mueca = $("<span class='mueca-aba'></span>")
+                    $(ele).append(mueca)
+                    Posicionamiento.posicionarArriba(origen, ele)
+                }else if(Posicionamiento.puedeIzquierda(origen, ele)) {
+                    mueca = $("<span class='mueca-der'></span>")
+                    $(ele).append(mueca)
+                    Posicionamiento.posicionarIzquierda(origen, ele)
+                }else if(Posicionamiento.puedeDerecha(origen, ele)) {
+                    mueca = $("<span class='mueca-izq'></span>")
+                    $(ele).append(mueca)
+                    Posicionamiento.posicionarDerecha(origen, ele)
+                }
+            break
         }
         activo = true
     }
