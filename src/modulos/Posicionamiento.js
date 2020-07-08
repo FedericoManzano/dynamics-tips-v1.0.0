@@ -37,7 +37,7 @@ class Posicionamiento {
         if(Posicionamiento.despIzquierda(ele) !== 0) 
             $(ele).css("left", Posicionamiento.posX(origen) + (reacX*-1) / 2 + Posicionamiento.despIzquierda(ele))
         if(Posicionamiento.despDerecha(ele) !== 0) 
-            $(ele).css("left", posX(origen) + (reacX*-1) / 2 + Posicionamiento.despDerecha(ele))
+            $(ele).css("left", Posicionamiento.posX(origen) + (reacX*-1) / 2 + Posicionamiento.despDerecha(ele))
         
     }
 
