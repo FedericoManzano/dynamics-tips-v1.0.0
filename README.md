@@ -60,7 +60,7 @@ que se encuentra en la parte superior de este documento. Y luego en uno de los e
 <a class="btn fd-azul tips-ele" data-pos="top" data-tips="Hola Soy un Tips !!!" data-evt="hover">Botón</a>
 ```
 
-En este ejemplo disponemos de un botón de [bodystyle](https://bodystyle.000webhostapp.com/documentacion/tooltips). 
+En este ejemplo disponemos de un botón de [bodystyle](https://bodystyle.000webhostapp.com/#/documentacion/tooltips). 
 
 Se le añade al elemento la clase `tips-ele`.
 Los attr `data-pos` y `data-evt` no son obligatorios por defecto estos tienen el valor de `bottom` y `hover`.
